@@ -1,6 +1,7 @@
-const { log } = console;
+import readline from 'readline';
+import checker from './service/checker.js';
 
-const readline = require('readline');
+const { log } = console;
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -8,12 +9,8 @@ const rl = readline.createInterface({
 });
 
 rl.question('Enter brackets:', (answer) => {
-    
-  const BRACKETS = ['[', ']', '{ ', '}', '(', ')'];
 
-
-
-  console.log(`This string is disbalans`);
+  checker(answer) ? log(`These brackets are balanced`) : log(`These brackets are unbalanced`);
 
   rl.close();
 });
