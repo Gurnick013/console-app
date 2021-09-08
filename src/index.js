@@ -1,5 +1,5 @@
-import readline from 'readline';
-import checker from './service/checker.js';
+const readline = require('readline');
+const checker = require('./service/checker.js');
 
 const { log } = console;
 
@@ -8,9 +8,12 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-rl.question('Enter brackets:', (answer) => {
+const asyncReadLine = () => {
+  rl.question('Enter brackets:', (answer) => {
+    if (answer === 'exit') return rl.close();
+    checker(answer) ? log(`These brackets are balanced`) : log(`These brackets are unbalanced`);
+    asyncReadLine();
+  });
+};
 
-  checker(answer) ? log(`These brackets are balanced`) : log(`These brackets are unbalanced`);
-
-  rl.close();
-});
+asyncReadLine();

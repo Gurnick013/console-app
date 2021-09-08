@@ -1,10 +1,13 @@
-import checker from './checker.js';
+const checker = require('./checker.js');
 
 describe('Test function', () => {
-  test('to be boolean', () => {
+  test('to be true', () => {
     const example1 = '[](){}';
-    const example2 = '[){';
-    expect(checker(example1).toBe(true));
-    expect(checker(example2).toBe(false));
+    expect(checker(example1)).toBe(true);
+  });
+
+  test('to be false', () => {
+    const example2 = '[)';
+    expect(checker(example2)).toBe(false);
   });
 });
