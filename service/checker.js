@@ -17,7 +17,7 @@ const checker = (value) => {
       } else return false;
     }
   }
-  return !stack.length;
-}
+  return !stack.length ? 'These brackets are balanced' : 'These brackets are unbalanced';
+};
 
-module.exports = checker;
+export default checker;
