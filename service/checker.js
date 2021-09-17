@@ -1,16 +1,18 @@
 const checker = (value) => {
+  // const total = String(value) ? value : value.parentheses;
+  const total = value;
   const stack = [];
-  for (let i = 0; i < value.length; i++) {
-    if (value[i] === '(' || value[i] === '[' || value[i] === '{') {
-      stack.push(value[i]);
-    } else if (value[i] === ')' || value[i] === ']' || value[i] === '}') {
+  for (let i = 0; i < total.length; i++) {
+    if (total[i] === '(' || total[i] === '[' || total[i] === '{') {
+      stack.push(total[i]);
+    } else if (total[i] === ')' || total[i] === ']' || total[i] === '}') {
       if (stack.length) {
         let last = stack[stack.length - 1];
         if (
-          (last === '[' && value[i] === ']') ||
-          (last === '(' && value[i] === ')') ||
-          (last === '{' && value[i] === '}') ||
-          (last === '<' && value[i] === '>')
+          (last === '[' && total[i] === ']') ||
+          (last === '(' && total[i] === ')') ||
+          (last === '{' && total[i] === '}') ||
+          (last === '<' && total[i] === '>')
         ) {
           stack.pop();
         }

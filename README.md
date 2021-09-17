@@ -1,9 +1,8 @@
-# check If parentheses is balanced
+### check If parentheses is balanced
+## Instal - mpm i -g
 
-
-## Run CLI - enter "check-parentheses"
+## Run CLI - enter check-parentheses
 ## Close CLI - enter "exit"
 
-## Run CLI whit param = enter "check-parentheses 'param'"
-# param - string whit parentheses (enter only one param)
+## Run CLI whit param = enter check-parentheses 'param'
 ## Close CLI - Ctrl+c
