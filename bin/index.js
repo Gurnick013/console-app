@@ -2,6 +2,7 @@
 
 import readline from 'readline';
 import checker from '../service/checker.js';
+
 const { log } = console;
 
 const rl = readline.createInterface({
