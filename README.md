@@ -1,5 +1,5 @@
 ### check If parentheses is balanced
-## Instal - npm i -g check-parentheses
+## Instal - npm i -g parentheses
 
 ## Run CLI - enter check-parentheses
 ## Close CLI - enter "exit"
