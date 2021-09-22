@@ -23,6 +23,7 @@ exit
 ```
 parentheses 'param'
 ```
+**param** - your string
 
 Close CLI...
 
