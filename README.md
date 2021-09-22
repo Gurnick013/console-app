@@ -20,12 +20,12 @@ exit
 
 ## _Run CLI with param_ 
 
-```sh
+```
 parentheses 'param'
 ```
 
 Close CLI...
 
-```sh
+```
 Ctrl+c
 ```
