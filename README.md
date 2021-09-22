@@ -1,8 +1,31 @@
-# check If parentheses is balanced
-## Instal - npm i -g
+# Сheck If parentheses is balanced
 
-## Run CLI - enter check-parentheses
-## Close CLI - enter exit
+## _Installation_ 
 
-## Run CLI with param - enter check-parentheses 'param'
-## Close CLI - Ctrl+c
+```sh
+npm i -g parentheses
+```
+
+## _Run CLI_
+
+```sh
+check-parentheses
+```
+
+Close CLI...
+
+```sh
+exit
+```
+
+## _Run CLI with param_ 
+
+```sh
+parentheses 'param'
+```
+
+Close CLI...
+
+```sh
+Ctrl+c
+```
