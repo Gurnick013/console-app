@@ -1,7 +1,5 @@
-#! /usr/bin/env node
-
 import readline from 'readline';
-import checker from '../service/checker.js';
+import checker from './service/checker.js';
 
 const { log } = console;
 
