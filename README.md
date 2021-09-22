@@ -9,7 +9,7 @@ npm i -g parentheses
 ## _Run CLI_
 
 ```sh
-check-parentheses
+parentheses
 ```
 
 Close CLI...
