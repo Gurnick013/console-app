@@ -7,7 +7,7 @@
     "parentheses": "./bin/check-parentheses.js"
   },
   "scripts": {
-    "start": "check-parentheses",
+    "start": "parentheses",
     "test": "jest",
     "lint": "eslint src --ext .js",
     "lint:fix": "eslint src --ext .js --fix",

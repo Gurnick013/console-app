@@ -12,11 +12,11 @@ if (process.argv.length === 2) {
   const asyncReadLine = () => {
     rl.question('Enter brackets:', (answer) => {
       if (answer.toLowerCase() === 'exit') return rl.close();
-      log(checker(answer));
+      log(isChecked(answer));
       asyncReadLine();
     });
   };
   asyncReadLine();
 } else {
-  log(checker(process.argv.slice(2)[0]));
+  log(isChecked(process.argv.slice(2)[0]));
 }

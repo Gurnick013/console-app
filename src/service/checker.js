@@ -1,24 +1,24 @@
-const checker = (value) => {
-  // const total = String(value) ? value : value.parentheses;
-  const stack = [];
-  for (let i = 0; i < value.length; i++) {
-    if (value[i] === '(' || value[i] === '[' || value[i] === '{') {
-      stack.push(value[i]);
-    } else if (value[i] === ')' || value[i] === ']' || value[i] === '}') {
-      if (stack.length) {
-        let last = stack[stack.length - 1];
-        if (
-          (last === '[' && value[i] === ']') ||
-          (last === '(' && value[i] === ')') ||
-          (last === '{' && value[i] === '}') ||
-          (last === '<' && value[i] === '>')
-        ) {
-          stack.pop();
-        }
-      } else return 'These brackets are unbalanced';
+import PARENTHESES from './constatns';
+
+const isChecked = (value) => {
+  if (!value) return 'Try enter parentheses again';
+
+  const filterString = value.match(/[\[\]\(\)\{\}]+/g).join('');
+
+  const openParentheses = PARENTHESES.keys();  
+
+  let stack = [];
+
+  for (let i = 0; i < filterString.length; i++) {
+    const current = filterString[i];
+    if (!PARENTHESES.has(current)) {
+      if (PARENTHESES.get(current) !== stack.pop()) return false;
+    } else {
+      stack.push(current);
     }
   }
-  return !stack.length ? 'These brackets are balanced' : 'These brackets are unbalanced';
+
+  return !stack.length ? 'These parentheses are balanced' : 'These parentheses are unbalanced';
 };
 
-export default checker;
+export default isChecked;
