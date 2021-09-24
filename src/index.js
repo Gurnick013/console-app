@@ -1,5 +1,5 @@
 import readline from 'readline';
-import checker from './service/checker.js';
+import isChecked from './service/isChecked.js';
 
 const { log } = console;
 
@@ -9,14 +9,15 @@ const rl = readline.createInterface({
 });
 
 if (process.argv.length === 2) {
-  const asyncReadLine = () => {
+  const toReadLine = () => {
     rl.question('Enter brackets:', (answer) => {
       if (answer.toLowerCase() === 'exit') return rl.close();
-      log(checker(answer));
-      asyncReadLine();
+      log(isChecked(answer));
+      toReadLine();
     });
   };
-  asyncReadLine();
+  toReadLine();
 } else {
-  log(checker(process.argv.slice(2)[0]));
+  log(isChecked(process.argv.slice(2)[0]));
+  process.exit();
 }

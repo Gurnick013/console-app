@@ -1,13 +1,13 @@
 {
   "name": "parentheses",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "balansed-or-unbalansed",
   "main": "dist/index.js",
   "bin": {
     "parentheses": "./bin/check-parentheses.js"
   },
   "scripts": {
-    "start": "check-parentheses",
+    "start": "parentheses",
     "test": "jest",
     "lint": "eslint src --ext .js",
     "lint:fix": "eslint src --ext .js --fix",
