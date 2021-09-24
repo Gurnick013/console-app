@@ -9,7 +9,9 @@ npm i -g parentheses
 ## _Run CLI_
 
 ```sh
+
 parentheses
+
 ```
 
 Close CLI...
@@ -25,3 +27,4 @@ parentheses 'param'
 ```
 
 **param** - your string
+
