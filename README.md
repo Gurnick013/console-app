@@ -1,6 +1,6 @@
 # Сheck If parentheses is balanced
 
-## _Installation_ 
+## _Installation_
 
 ```sh
 npm i -g parentheses
@@ -18,15 +18,10 @@ Close CLI...
 exit
 ```
 
-## _Run CLI with param_ 
+## _Run CLI with param_
 
 ```
 parentheses 'param'
 ```
+
 **param** - your string
-
-Close CLI...
-
-```
-Ctrl+c
-```
