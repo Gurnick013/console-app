@@ -8,16 +8,12 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-if (process.argv.length === 2) {
-  const toReadLine = () => {
-    rl.question('Enter brackets:', (answer) => {
-      if (answer.toLowerCase() === 'exit') return rl.close();
-      log(isChecked(answer));
-      toReadLine();
-    });
-  };
-  toReadLine();
-} else {
-  log(isChecked(process.argv.slice(2)[0]));
-  process.exit();
-}
+const toReadLine = () => {
+  rl.question('Enter brackets:', (answer) => {
+    if (answer.toLowerCase() === 'exit') return rl.close();
+    log(isChecked(answer));
+    toReadLine();
+  });
+};
+
+export default toReadLine;

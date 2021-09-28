@@ -1,6 +1,6 @@
 {
   "name": "parentheses",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "balansed-or-unbalansed",
   "main": "dist/index.js",
   "bin": {
