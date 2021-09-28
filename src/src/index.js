@@ -1,7 +1,5 @@
-#! /usr/bin/env node
-
-import toReadLine from '../src/index.js';
-import isChecked from '../src/service/isChecked.js';
+import toReadLine from './engine/toReadLine.js';
+import isChecked from './engine/isChecked.js';
 
 if (process.argv.length === 2) {
   toReadLine();

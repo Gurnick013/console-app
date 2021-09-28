@@ -1,5 +1,5 @@
 import readline from 'readline';
-import isChecked from './service/isChecked.js';
+import isChecked from './isChecked.js';
 
 const { log } = console;
 

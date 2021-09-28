@@ -1,4 +1,4 @@
-import isChecked from './isChecked.js';
+import isChecked from '../src/src/engine/isChecked.js';
 
 describe('Test function', () => {
   test('It should be balanced', () => {
